@@ -1,0 +1,128 @@
+---
+const virtues = [
+  {
+    title: "Mentalidad de Holding",
+    subtitle: "Experiencia de producto, visión empresarial",
+    description:
+      "Hemos desarrollado y escalado nuestras propias plataformas exitosas. Esto nos da una perspectiva única para entender no solo el desarrollo técnico, sino también la estrategia de negocio y la monetización de tu proyecto.",
+  },
+  {
+    title: "Escalabilidad y Futuro",
+    subtitle: "Soluciones Diseñadas para crecer contigo",
+    description:
+      "Construimos con el futuro en mente. Nuestras arquitecturas son robustas y escalables, preparadas para adaptarse y expandirse junto con las necesidades cambiantes de tu mercado..",
+  },
+  {
+    title: "Conectividad y Ecosistemas",
+    subtitle: "Maestros en conectar ecosistemas",
+    description:
+      "Nos especializamos en crear plataformas que unen a personas, negocios y servicios. Creemos en el poder de la conexión digital para generar nuevas oportunidades y experiencias.",
+  },
+];
+---
+
+<div class="container" id="About">
+  <h1>¿Por Qué Elegir a The Masters SAS?</h1>
+  <p>
+    No somos solo una empresa de desarrollo de software; somos visionarios que
+    constuyen el futuro digital.
+  </p>
+
+  <div class="container-card">
+    {
+      virtues.map((virtue) => (
+        <div class="card">
+          <h2>{virtue.title}</h2>
+          <h3>{virtue.subtitle}</h3>
+          <p>{virtue.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .container {
+    /* background-color: burlywood; */
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+    color: var(--azul-marino);
+    margin-bottom: 2rem;
+  }
+
+  .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 460px;
+    background-color: var(--azul-palido);
+    text-align: left;
+    padding: 2rem;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border-left: 5px solid var(--azul-brillante);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    color: var(--azul-brillante);
+    margin-bottom: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: var(--azul-marino);
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      /* background-color: chartreuse; */
+    }
+
+    .container p {
+      display: block;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+    .container-card {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card {
+      height: 380px;
+    }
+  }
+</style>

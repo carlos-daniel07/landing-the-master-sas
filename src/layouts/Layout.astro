@@ -1,23 +1,66 @@
+---
+import Navbar from "../components/Navbar.astro";
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/images/logo-tm.jpeg" />
+    <link rel="icon" href="/images/logo-tm.jpeg" />
+    <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
+    <title>The Master SAS</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --azul-profundo: #003b5d;
+    --lemon-tonic: #fff951;
+    --azul-marino: #24252b;
+    --grisaseo-claro: #606c73;
+    --azul-palido: #edeef6;
+    --azul-brillante: #1d789c;
+    --cian-fuerte: #1c8078;
+    --amarillo-aburrido: #b3bd33;
+    --amarillo-brillante: #e1bd37;
+    --ladrillo: #cc6940;
+    --rojo-fuerte: #c02b3a;
+    --rosa-brillante: #bf335c;
+    --rojo-suave: #c85e5d;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/Montserrat-Bold.woff2) format("woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/Montserrat-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

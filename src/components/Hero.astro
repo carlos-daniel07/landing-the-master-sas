@@ -1,0 +1,102 @@
+<div class="container" id="Home">
+  <div>
+    <h1 class="title">
+      The Master SAS: El Holding que impulsa la visión digital de tu negocio
+    </h1>
+    <p class="description">
+      En The Masters SAS, transformamos ideas complejas en soluciones digitales
+      de alto impacto. Somos la fuerza detrás de productos innovadores y el
+      socio estratégico para el desarrollo de software a medida que realmente
+      hace crecer tu negocio.
+    </p>
+    <button class="cta-button">
+      <a href="/Contacto"> Agenda una consultoría gratuita </a>
+    </button>
+  </div>
+  <img src="/images/logo-tm-removebg.png" alt="hero" class="hero-movil" />
+</div>
+
+<style>
+  .container {
+    font-family: "Montserrat", sans-serif;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem;
+    /* background-color: antiquewhite; */
+  }
+
+  .title {
+    font-size: 2.5rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+
+  .description {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--azul-marino);
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .cta-button {
+    padding: 1rem 3rem;
+    background-color: var(--lemon-tonic);
+    border: 1px solid var(--azul-profundo);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: var(--azul-profundo);
+    border-color: var(--lemon-tonic);
+    transform: translateY(-2px);
+  }
+
+  .cta-button a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--azul-profundo);
+  }
+
+  .cta-button:hover a {
+    color: var(--lemon-tonic);
+    text-decoration: underline;
+  }
+
+  .hero-movil {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      /* background-color: aqua; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100dvh;
+    }
+    .container div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .hero-movil {
+      width: 50%;
+      padding: 0 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,133 @@
+---
+const phases = [
+  {
+    title: "Fase 1: Planificación y Análisis",
+    subtitle: "Entendimiento profundo",
+    description:
+      "Iniciamos con una inmersión total en tu negocio, tus objetivos y tus desafíos. Analizamos tus procesos, objetivos y desafíos para senrtar las bases de una solución digital que realmente impulse tu crecimiento.",
+  },
+  {
+    title: "Fase 2: Diseño y Arquitectura",
+    subtitle: "Innovación y Usabilidad",
+    description:
+      "Desarrollamos una arquitectura robusta y un diseño de experiencia (UX/UI) intuitivo y atractivo. Nos aseguramos de que tu software no solo funcione impecablemente, sino que también sea un placer usarlo.",
+  },
+  {
+    title: "Fase 3: Programación y Pruebas",
+    subtitle: "Ejecución precisa y Calidad garantizada",
+    description:
+      "Con metodologías ágiles y un equipo de desarrolladores de élite, construimos tu software con los más altos estándares. Cada línea de código es sometida a rigurosas pruebas para asegurar rendimiento, seguridad y estabilidad.",
+  },
+];
+---
+
+<div class="container" id="Software">
+  <h1>
+    Desarrollo de software a la medida: Tu visión, nuestro código y creatividad
+  </h1>
+
+  <p>
+    ¿Necesitas una solución digital única que se adapte perfectamente a tu
+    modelo de negocio? En The Masters SAS, somos expertos en convertir tus
+    desafíos en software potente, escalable y diseñado exclusivamente para ti.
+  </p>
+
+  <div class="container-card">
+    {
+      phases.map((phase) => (
+        <div class="card">
+          <h2>{phase.title}</h2>
+          <h3>{phase.subtitle}</h3>
+          <p>{phase.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .container {
+    font-family: "Montserrat", sans-serif;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem;
+    /* background-color: aquamarine; */
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: var(--azul-profundo);
+  }
+
+  .container p {
+    font-size: 1.2rem;
+    color: var(--azul-marino);
+    margin-bottom: 2rem;
+  }
+
+  .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    background-color: var(--azul-profundo);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    margin: 1rem 0;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 460px;
+    text-align: left;
+  }
+
+  .card h2 {
+    color: var(--lemon-tonic);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .card h3 {
+    color: var(--rosa-brillante);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    color: var(--azul-palido);
+    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      /* background-color: azure; */
+    }
+
+    .container p {
+      display: block;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    .container-card {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card {
+      height: 380px;
+    }
+  }
+</style>
