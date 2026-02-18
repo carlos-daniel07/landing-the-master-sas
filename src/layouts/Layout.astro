@@ -13,6 +13,10 @@ import { ClientRouter } from "astro:transitions";
     <meta name="generator" content={Astro.generator} />
     <ClientRouter />
     <title>The Master SAS</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <Navbar />
@@ -56,6 +60,11 @@ import { ClientRouter } from "astro:transitions";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: var(--lemon-tonic);
+    color: var(--azul-profundo);
   }
   html,
   body {
