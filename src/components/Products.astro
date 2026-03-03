@@ -175,11 +175,12 @@ const platforms = [
   }
 
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--azul-profundo);
     margin-top: 3rem;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
+    padding-left: 1rem;
   }
 
   .plataforms-container {
@@ -552,15 +553,53 @@ const platforms = [
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 1440px) {
+    .container h1 {
+      text-align: center !important;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .container h1 {
+      text-align: center !important;
+    }
     .thumbnail {
       bottom: 50px;
       left: 63%;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: 100%;
+    }
+    .container h1 {
+      font-size: 2.5rem;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .thumbnail {
+      bottom: 20px;
+      left: 63%;
+    }
+
+    .arrows {
+      top: 85%;
+      right: 20%;
+    }
+  }
   @media screen and (max-width: 768px) {
     .container {
       width: 100%;
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
     }
     .carousel {
       width: 100%;
@@ -596,6 +635,9 @@ const platforms = [
     }
   }
   @media screen and (max-width: 426px) {
+    .container h1 {
+      padding: 0 2rem;
+    }
     .carousel {
       width: 100%;
       height: calc(100dvh - 70px);
@@ -606,7 +648,7 @@ const platforms = [
     .carousel .list .item .content {
       top: 2%;
       left: 50%;
-      max-width: 100%;
+      max-width: 90%;
       padding: 0 10px;
     }
 
@@ -636,6 +678,37 @@ const platforms = [
       height: 200px;
     }
   }
+
+  @media screen and (max-width: 320px) {
+    .container h1 {
+      padding: 0 2rem;
+    }
+    .thumbnail {
+      /* display: none; */
+    }
+
+    .thumbnail .item {
+      height: 150px;
+      width: 100px;
+    }
+
+    .thumbnail .item .content .title {
+      font-size: 13px;
+    }
+    .thumbnail .item .content .des {
+      font-size: 12px;
+    }
+
+    .arrows {
+      top: 87%;
+    }
+
+    .arrows button {
+      width: 30px;
+      height: 30px;
+      font-size: medium;
+    }
+  }
 </style>
 
 <script>
@@ -658,7 +731,7 @@ const platforms = [
   }
 
   let timeRunning = 1000;
-  let timeAutoNext = 10000;
+  let timeAutoNext = 15000;
   let runTimeOut: any;
   let runAutoNext: any = setTimeout(() => {
     nextDom?.click();

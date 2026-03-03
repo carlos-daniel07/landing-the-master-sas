@@ -28,15 +28,16 @@
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--azul-profundo);
     margin-bottom: 1rem;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
   }
 
   .description {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--azul-marino);
     margin-bottom: 1rem;
     width: 100%;
@@ -61,7 +62,7 @@
   }
 
   .cta-button a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
     font-weight: 500;
     color: var(--azul-profundo);
@@ -74,16 +75,26 @@
 
   .hero-movil {
     width: 100%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+  }
+
+  @media (min-width: 1024px) {
+    .title {
+      font-size: 2.5rem !important;
+    }
+
+    .cta-button {
+      margin-right: auto;
+    }
   }
 
   @media (min-width: 768px) {
     .container {
-      /* background-color: aqua; */
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100dvh;
+      /* background-color: red; */
     }
     .container div {
       width: 50%;
@@ -92,6 +103,10 @@
       justify-content: center;
       align-items: center;
       gap: 15px;
+    }
+
+    .title {
+      font-size: 2rem;
     }
 
     .hero-movil {

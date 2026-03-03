@@ -57,16 +57,18 @@ const phases = [
   }
 
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     margin-top: 3rem;
     color: var(--azul-profundo);
+    text-align: left;
   }
 
   .container p {
     font-size: 1.2rem;
     color: var(--azul-marino);
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .container-card {
@@ -81,9 +83,9 @@ const phases = [
     background-color: var(--azul-profundo);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     margin: 1rem 0;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     max-width: 460px;
     text-align: left;
   }
@@ -107,9 +109,35 @@ const phases = [
     line-height: 1.7;
   }
 
+  @media (min-width: 1440px) {
+    .container-card .card {
+      max-height: 360px !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .container > p {
+      text-align: center;
+    }
+
+    .container-card {
+      flex-direction: row !important;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card {
+      max-height: 420px !important;
+      height: 420px !important;
+    }
+  }
   @media (min-width: 768px) {
     .container {
-      /* background-color: azure; */
+      /* background-color: rgb(15, 197, 197); */
     }
 
     .container p {
@@ -120,14 +148,15 @@ const phases = [
     }
 
     .container-card {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
     }
 
     .card {
-      height: 380px;
+      max-height: 380px;
+      height: auto;
     }
   }
 </style>

@@ -52,16 +52,18 @@
   }
 
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--azul-profundo);
     margin-bottom: 1rem;
     margin-top: 3rem;
+    text-align: left;
   }
 
   .container p {
     font-size: 1.2rem;
     color: var(--azul-marino);
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .contact-form {
@@ -141,10 +143,17 @@
     min-height: 120px;
   }
 
-  @media (min-width: 768px) {
-    .container {
-      /* background-color: rgb(76, 245, 245); */
+  @media (min-width: 1024px) {
+    .container h1,
+    .container p {
+      text-align: center;
     }
+
+    .container h1 {
+      font-size: 2.5rem;
+    }
+  }
+  @media (min-width: 768px) {
     .container p {
       display: block;
       max-width: 800px;
