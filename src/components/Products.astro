@@ -180,7 +180,9 @@ const platforms = [
     margin-top: 3rem;
     margin-bottom: 1rem;
     text-align: left;
-    padding-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
   .plataforms-container {
@@ -553,7 +555,7 @@ const platforms = [
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (max-width: 1440px) {
     .container h1 {
       text-align: center !important;
     }
@@ -561,7 +563,7 @@ const platforms = [
 
   @media screen and (max-width: 1440px) {
     .container h1 {
-      text-align: center !important;
+      text-align: center;
     }
     .thumbnail {
       bottom: 50px;
@@ -636,7 +638,10 @@ const platforms = [
   }
   @media screen and (max-width: 426px) {
     .container h1 {
-      padding: 0 2rem;
+      text-align: left !important;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
     .carousel {
       width: 100%;
@@ -681,12 +686,10 @@ const platforms = [
 
   @media screen and (max-width: 320px) {
     .container h1 {
-      padding: 0 2rem;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .thumbnail {
-      /* display: none; */
-    }
-
     .thumbnail .item {
       height: 150px;
       width: 100px;
