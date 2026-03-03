@@ -58,7 +58,7 @@ const platforms = [
     <div class="carousel">
       <div class="list">
         <div class="item">
-          <img src="/images/bg1.jpeg" />
+          <img src="/images/melappido.webp" alt="Melappido" />
           <div class="content">
             <div class="title">MelAppido</div>
             <div class="sub">
@@ -78,7 +78,7 @@ const platforms = [
           </div>
         </div>
         <div class="item">
-          <img src="/images/bg-cta-1.jpg" />
+          <img src="/images/justgo.webp" alt="Justgo" />
           <div class="content">
             <div class="title">JustGo</div>
             <div class="sub">
@@ -120,7 +120,7 @@ const platforms = [
       </div>
       <div class="thumbnail">
         <div class="item">
-          <img src="/images/bg1.jpeg" alt="logo" />
+          <img src="/images/melappido.webp" alt="Melappido" />
           <div class="content">
             <div class="title">MelaAppido</div>
             <div class="des">
@@ -130,7 +130,7 @@ const platforms = [
         </div>
 
         <div class="item">
-          <img src="/images/bg-cta-1.jpg" alt="logo" />
+          <img src="/images/justgo.webp" alt="justgo" />
           <div class="content">
             <div class="title">JustGo</div>
             <div class="des">
@@ -164,7 +164,7 @@ const platforms = [
   .container {
     font-family: "Montserrat", sans-serif;
     width: 90%;
-    /* height: 100%; */
+    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -178,7 +178,7 @@ const platforms = [
     font-size: 2.5rem;
     color: var(--azul-profundo);
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 
@@ -290,9 +290,17 @@ const platforms = [
     padding-right: 30%;
     box-sizing: border-box;
     color: var(--azul-palido);
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 5px 10px black;
   }
 
+  .carousel .list .item .content .title {
+    background-color: var(--lemon-tonic);
+    color: var(--azul-profundo);
+    width: max-content;
+    text-shadow: none;
+    padding: 0 1rem;
+    font-size: 2.1em;
+  }
   .carousel .list .item .content .title,
   .carousel .list .item .content .sub {
     font-size: 2em;
@@ -309,7 +317,7 @@ const platforms = [
     border-radius: 50px;
     cursor: pointer;
     border: 2px solid var(--azul-brillante);
-    background-color: transparent;
+    background-color: var(--azul-palido);
     color: var(--azul-brillante);
     box-shadow: 0 0 6px rgba(29, 120, 156, 0.5);
     margin-bottom: 0.5rem;
@@ -330,7 +338,7 @@ const platforms = [
   .thumbnail {
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 65%;
     width: max-content;
     z-index: 1000;
     display: flex;
@@ -345,6 +353,8 @@ const platforms = [
     height: 220px;
     flex-shrink: 0;
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.8);
   }
 
   .thumbnail .item img {
@@ -359,6 +369,7 @@ const platforms = [
     bottom: 10px;
     left: 10px;
     right: 10px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 
   .thumbnail .item .content .title {
@@ -368,7 +379,7 @@ const platforms = [
   .arrows {
     position: absolute;
     top: 80%;
-    right: 52%;
+    right: 22%;
     width: 300px;
     max-width: 30%;
     display: flex;
@@ -380,20 +391,25 @@ const platforms = [
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--azul-profundo);
+    background-color: var(--azul-palido);
     border: none;
     font-family: monospace;
-    color: var(--azul-palido);
+    color: var(--azul-brillante);
     font-weight: bold;
     font-size: large;
-    transition: 0.5s;
     cursor: pointer;
     z-index: 1000;
+    transition: all 0.5s;
   }
 
   .arrows button:hover {
-    background-color: var(--azul-palido);
+    background-color: var(--lemon-tonic);
     color: var(--azul-profundo);
+    transform: translateY(-1px);
+  }
+
+  .arrows button:active {
+    transform: scale(0.95);
   }
 
   .carousel .list .item:nth-child(1) {
@@ -533,6 +549,91 @@ const platforms = [
     .carousel .list .item .content .title,
     .carousel .list .item .content .sub {
       font-size: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .thumbnail {
+      bottom: 50px;
+      left: 63%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+    .carousel {
+      width: 100%;
+      height: calc(100dvh - 80px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel .list .item .content {
+      top: 5%;
+      left: 49%;
+      max-width: 80%;
+      padding-right: 20%;
+    }
+
+    .carousel .list .item .content .title,
+    .carousel .list .item .content .sub {
+      font-size: 1.8em;
+      font-weight: bold;
+      list-style: 1.3em;
+    }
+
+    .arrows {
+      position: absolute;
+      top: 80%;
+      right: 30%;
+      width: 300px;
+      max-width: 30%;
+    }
+    .thumbnail {
+      bottom: 30px;
+      left: 55%;
+    }
+  }
+  @media screen and (max-width: 426px) {
+    .carousel {
+      width: 100%;
+      height: calc(100dvh - 70px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel .list .item .content {
+      top: 2%;
+      left: 50%;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .carousel .list .item .content .title,
+    .carousel .list .item .content .sub {
+      font-size: 1.6em;
+      font-weight: bold;
+      list-style: 1.3em;
+    }
+
+    .carousel .list .item .content .des {
+      font-size: 15px;
+    }
+
+    .arrows {
+      top: 84%;
+      right: 66%;
+      width: 300px;
+      max-width: 30%;
+    }
+    .thumbnail {
+      bottom: 5px;
+      left: 30%;
+    }
+
+    .thumbnail .item {
+      height: 200px;
     }
   }
 </style>
